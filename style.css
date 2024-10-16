@@ -1,18 +1,23 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
+html, body {
+    height: 100%;
+}
 
 body {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    height: 100vh;
     text-align: center;
     background: url(imagenes/fondo.jpg) no-repeat center center/cover;
 }
 
+/* Contenedor principal */
 .contenedor-principal {
     width: 80vh;
     max-width: 600px;
@@ -21,11 +26,12 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    background-color:  rgba(236, 234, 234, 0.8);
+    background-color: rgba(236, 234, 234, 0.8);
     border: 5px solid black;
     border-radius: 30px;
 }
 
+/* Botones */
 .contenedor-botones {
     padding: 20px;
 }
@@ -37,8 +43,6 @@ body {
     user-select: none;
     font-family: 'Noto Sans Thai', sans-serif;
 }
-
-/* Botones */
 
 .boton {
     width: 80px;
@@ -52,8 +56,6 @@ body {
 
 .boton:hover {
     box-shadow: 3px -3px 38px 19px rgba(92,92,92,0.97);
--webkit-box-shadow: 3px -3px 38px 19px rgba(92,92,92,0.97);
--moz-box-shadow: 3px -3px 38px 19px rgba(92,92,92,0.97);
 }
 
 #boton-inicio-pausa.iniciar,
@@ -71,4 +73,18 @@ body {
 #boton-reiniciar {
     background-color: rgb(160, 4, 4);
     border: 1px solid rgb(160, 4, 4);
+}
+
+/* Footer */
+.footer {
+    background-color: rgba(92,92,92,0.97);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    position: relative; /* Para evitar problemas de superposición */
+}
+
+.footer p {
+    margin: 0;
 }
